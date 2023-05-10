@@ -1,49 +1,24 @@
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
 
 body {
-  background-color: #1E1E1E;
-}
-
-.masonry-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  overflow-x: auto;
+  margin: 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
   height: 100vh;
+  background-color: #1E1E1E;
+  box-sizing: border-box;
 }
 
-.masonry-item {
-  position: relative;
-  margin-right: 8px; /* Adjust the margin between items as needed */
-  height: 15vh;
-  width: auto;
-}
-
-.masonry-item img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.title-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+#container {
   height: 100%;
-  background-color: rgba(174, 174, 174, 0); /* Adjust the overlay color as needed */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: transparent;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Adjust the text shadow as needed */
-  -webkit-background-clip: text;
-  background-clip: text;
-  transition: background-color 0.3s ease; /* Adjust the transition duration as needed */
+  white-space: nowrap;
 }
 
-.masonry-item:hover .title-label {
-  background-color: rgba(255, 255, 255, 0); /* Remove the overlay on hover */
+.grid-item {
+  max-width: 33%;
+}
+
+.grid-item.large {
+  max-width: 44%;
 }
